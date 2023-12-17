@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encore</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="input.css">
+
+</head>
+<body>
+
+    <main class="min-h-screen bg-[#080217]" >
+        <!-- Header -->
+
+        <header>
+          <nav class="fixed top-0 flex justify-between items-center p-5 bg-[#080217] min-w-full md:min-w-[768px] mx-auto z-50">
+              <div></div>
+              <div>
+                  <h2 class="font-semi text-xl">ENCORE</h2>
+              </div>
+              <div>
+                  <div class="flex items-center justify-center">
+                      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-8 h-8">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5h16.5M8.25 12h7.5M11.25 16.5h2.25" />
+                      </svg>
+                  </div>
+              </div>
+          </nav>
+      </header>
+
+      <div id="fullScreenNavBar" class="fixed inset-0 bg-[#080217a1] text-white p-4 hidden backdrop-blur z-50">
+          <div class="flex justify-between items-center p-4">
+              <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 cursor-pointer">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+          </div>
+
+          <div class="flex flex-col justify-center items-center h-full">
+              
+              <div class="flex flex-col">
+                  <a class="text-4xl underline font-semi" href="/">Invite a User</a>
+                  <a class="mt-3 mb-3 text-4xl underline font-semi" href="/">ContactUs</a>
+                  <a class="text-4xl underline font-semi" href="/">Log Out</a>
+              </div>
+
+
+              <div class="flex mt-16">
+                  <a class="w-10" href="/">
+                      <img src="/images/linkedin.svg" class="bg-white rounded-md" alt="">
+                  </a>
+                  <a class="w-10 ml-5" href="/">
+                      <img src="/images/instagram.svg" class=" rounded-md" alt="">
+                  </a>
+                  <a class="w-10 ml-5" href="/">
+                      <img src="/images/Twitter X.svg" class=" rounded-md" alt="">
+                  </a>
+                  <a class="w-10 ml-5" href="/">
+                      <img src="/images/fb.svg" class="rounded-full" alt="">
+                  </a>
+              </div>
+
+              <div class="flex flex-col mt-12">
+                  <div class="flex">
+                      <a href="" class="underline mr-1">Terms of Service </a> |
+                      <a href="" class="underline ml-1"> Privicy Policy </a> 
+                  </div>
+
+                  <div class=" flex items-center justify-center mt-2">
+                      <a href="" class="underline"> websitename.com </a> 
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+
+
+        <div class="w-full flex flex-col  pt-24 overflow-auto " >
+            <!-- Profile Section -->
+
+            <div class="flex items-center justify-center mx-auto w-full mt-5">
+                <div class="w-24">
+                    <img src="/images/songs/Buggin.png" class="object-cover w-full rounded-xl" alt="Song Cover">
+                </div>
+
+                <div class="flex flex-col ml-5">
+                    <h1 class="text-2xl font-semibold">Buggin' Out</h1>
+                    <p class="text-sm font-thin">Releasing: <span class="text-[#c3ff00]">09/01/2023</span></p>
+
+                    <div class="flex mt-3">
+                        <button class="text-[12px] font-thin p-1 px-3 rounded-md bg-[#2d293abb]"> Edit Song page</button>
+                        <button class="ml-3 text-[12px] font-thin p-1 px-3 rounded-md bg-[#2d293abb]"> Preview </button>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="w-full -mt-20">
+                <!-------------------- Song Media -------------------->
+                <div class="min-h-screen pt-5 p-4 m-2 rounded-3xl bg-[#0f042e] overflow-y-hidden " id="openTask" >
+                    <div class="flex items-start">
+                        <div class="flex items-center justify-center">
+                            <svg class="bg-[#3f0dbc] w-10 h-10 text-white rounded-full p-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                              </svg>
+
+                              <div class="flex items-center">
+                                <h1 class="pl-4 items-center text-3xl">Add Song Media</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+
+                        <div class="">
+                          <div 
+                            role="tablist"
+                            aria-label="tabs"
+                            class="relative mx-auto h-12 grid grid-cols-4 items-center px-[3px] rounded-full mt-10 bg-[#261e43] overflow-hidden shadow-2xl shadow-900/20 transition"
+                          >
+                            <div class="absolute indicator h-11 my-auto top-0 bottom-0 left-0 rounded bg-white/50 shadow-md" ></div>
+                            <button
+                              role="tab"
+                              aria-selected="true"
+                              aria-controls="panel-1"
+                              id="tab-1"
+                              tabindex="0"
+                              class="relative block tab"
+                            >
+                              <span class="text-white font-semi z-10">Text</span>
+                            </button>
+
+                            <button
+                              role="tab"
+                              aria-selected="false"
+                              aria-controls="panel-2"
+                              id="tab-2"
+                              tabindex="-1"
+                              class="relative block h-10 px-6 tab border-l-2 border-gray-500"
+                            >
+                            <span class="text-white font-semi z-10">Image</span>
+                            </button>
+
+                            <button
+                              role="tab"
+                              aria-selected="false"
+                              aria-controls="panel-3"
+                              id="tab-3"
+                              tabindex="-1"
+                              class="relative block h-10 px-6 tab border-l-2 border-gray-500"
+                            >
+                            <span class="text-white font-semi z-10">Audio</span>
+                            </button>
+
+                            <button
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="panel-4"
+                            id="tab-4"
+                            tabindex="-1"
+                            class="relative block h-10 px-6 tab border-l-2 border-gray-500"
+                          >
+                          <span class="text-white font-semi z-10">Link</span>
+                          </button>
+
+                          </div>
+
+                          <div class="mt-6 relative rounded-xl text-white">
+                            <div
+                              role="tabpanel"
+                              id="panel-1"
+                              class="tab-panel transition duration-300"
+                            >
+
+                            <div class="bg-[#342a4d] p-6 rounded-lg">
+
+                              <div class=" flex flex-col">
+
+                                  <div class="flex items-center justify-between">
+                                      <h1 class="text-xl">Song Lyrics</h1>
+
+                                      <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                                        </svg>
+                                      </span>
+                                  </div>
+
+
+                                  <div class="flex items-center justify-start gap-4 pt-7">
+                                    <button class="w-[50%] p-2 bg-white text-black text-lg font-semi rounded-md">
+                                      Generate
+                                    </button>
+
+                                    <button class="w-[50%] p-2 bg-[#463f60] text-white text-lg font-semi rounded-md">
+                                      Paste
+                                    </button>
+                                  </div>
+
+                                  <div class="bg-[#3c3556] p-3 mt-7 rounded-md flex flex-col">
+
+                                    <div class="flex items-center justify-center p-3">
+
+                                      <div>
+                                        <img src="/images/music.svg" class="w-12" alt="music">
+                                      </div>
+
+                                      <div class="flex flex-col  pl-4">
+                                        <p class="text-[14px] line-clamp-1">My Song 08.02.23 Mastered.mp3</p>
+
+                                        <span class="text-[10px] line-clamp-1 font-thin pt-1 text-gray-300">4.2 MB - 3 minutes 40 seconds</span>
+                                      </div>
+                                    </div>
+
+                                    <div class="flex items-center justify-center pt-4 pb-2">
+                                      <button class="text-black text-sm font-semibold bg-[#d7ff54] w-full p-3 px-6 rounded-lg">
+                                        Generate Lyrics from Song Audio
+                                      </button>
+                                    </div>
+          
+                                  </div>
+
+                                  <p class="flex items-center justify-center pt-5 ">Exiting song Lyrics</p>
+
+                                <div class="grid grid-cols-3 gap-3 pt-5 justify-between -">
+
+
+                                  <div class="bg-gradient-to-br from-lime-300 to-lime-800 p-2 h-32 min-w-32 rounded-lg relative">
+                                      <div class="flex flex-col h-4/5">
+                                          <p class="line-clamp-6 font-semi text-[12px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolores pariatur odio vitae quia repellat corporis expedita est amet. Cupiditate iure in corrupti quasi autem adipisci voluptatem, illo inventore nostrum ducimus omnis.</p>
+                                      </div>
+          
+                                      <div class="absolute bottom-0 left-0 w-full p-2">
+                                          <a class="text-white text-xs font-semibold line-clamp-1">LYRICS</a>
+                                      </div> 
+                                  </div>
+
+                                  <div class="bg-gradient-to-br from-lime-300 to-lime-800 p-2 h-32 min-w-32 rounded-lg relative">
+                                      <div class="flex flex-col h-4/5">
+                                          <p class="line-clamp-6 font-semi text-[12px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolores pariatur odio vitae quia repellat corporis expedita est amet. Cupiditate iure in corrupti quasi autem adipisci voluptatem, illo inventore nostrum ducimus omnis.</p>
+                                      </div>
+          
+                                      <div class="absolute bottom-0 left-0 w-full p-2">
+                                          <a class="text-white text-xs font-semibold  line-clamp-1">LYRICS CLEAN</a>
+                                      </div> 
+                                  </div>
+
+                                  <div class="bg-gradient-to-br from-lime-300 to-lime-800 p-2 h-32 min-w-32 rounded-lg relative">
+                                    <div class="flex flex-col h-4/5">
+                                        <p class="line-clamp-6 font-semi text-[12px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolores pariatur odio vitae quia repellat corporis expedita est amet. Cupiditate iure in corrupti quasi autem adipisci voluptatem, illo inventore nostrum ducimus omnis.</p>
+                                    </div>
+        
+                                    <div class="absolute bottom-0 left-0 w-full p-2">
+                                        <a class="text-white text-xs font-semibold line-clamp-1 ">LYRICS DRAFT</a>
+                                    </div> 
+                                </div>
+
+                                </div>
+
+
+
+
+                              </div>
+
+                            </div>
+
+                            <div class="bg-[#342a4d] p-6 rounded-lg mt-6">
+
+                              <div class=" flex flex-col">
+
+                                <div class="flex items-center justify-between">
+                                    <h1 class="text-xl">Song Summary</h1>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="bg-[#342a4d] p-6 rounded-lg mt-6">
+
+                              <div class=" flex flex-col">
+
+                                <div class="flex items-center justify-between">
+                                    <h1 class="text-xl">Audio Summary</h1>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+
+
+                            <div
+                              role="tabpanel"
+                              id="panel-2"
+                              class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300 bg-[#342a4d] rounded-lg"
+                            >
+
+                            <h2 class="text-xl font-semibold">Image Link Here</h2>
+                            <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta.</p>
+
+                              
+                            </div>
+
+
+                            <div
+                              role="tabpanel"
+                              id="panel-3"
+                              class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300 bg-[#342a4d] rounded-lg"
+                            >
+
+                            <h2 class="text-xl font-semibold">Audio Link Here</h2>
+                            <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta.</p>
+                            </div>
+
+
+
+                            <div
+                              role="tabpanel"
+                              id="panel-4"
+                              class="absolute top-0 invisible opacity-0 tab-panel transition duration-300 w-full"
+                            >
+                            <div class="bg-[#342a4d] p-6 rounded-lg">
+
+                              <div class=" flex flex-col">
+
+                                  <div class="flex items-center justify-between">
+                                      <h1 class="text-xl">Song Links</h1>
+
+                                      <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                                        </svg>
+                                      </span>
+                                  </div>
+
+
+                                  <div class="flex items-center justify-start pt-7 w-full">
+                                    <input type="" class="w-full bg-[#463f60] p-4 rounded-lg border-none focus:outline-none" placeholder="0380138">
+                                  </div>
+
+
+                                  <p class="text-[12px] pt-5 ">Links found from your ISRC</p>
+
+                                <div class="flex flex-col  justify-between pt-5 w-full">
+                                    <div class="input-container ">
+                                      <div class="input-row flex items-center justify-between">
+                                        <div class="w-[90%]">
+                                          <input type="text" class="input-field] w-full bg-[#463f60] p-4 rounded-lg border-none focus:outline-none" placeholder="apple.link/gose here.">
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                          <button class="remove-button ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                      
+                                          </button>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+
+                                    <div class="input-container mt-5">
+                                      <div class="input-row flex items-center justify-between">
+                                        <div class="w-[90%]">
+                                          <input type="text" class="input-field] w-full bg-[#463f60] p-4 rounded-lg border-none focus:outline-none" placeholder="apple.link/gose here.">
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                          <button class="remove-button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                      
+                                          </button>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+
+                                    <div class="input-container mt-5">
+                                      <div class="input-row flex items-center justify-between">
+                                        <div class="w-[90%]">
+                                          <input type="text" class="input-field] w-full bg-[#463f60] p-4 rounded-lg border-none focus:outline-none" placeholder="apple.link/gose here.">
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                          <button class="remove-button ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                      
+                                          </button>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+
+                                    <div class="input-container mt-5">
+                                      <div class="input-row flex items-center justify-between">
+                                        <div class="w-[90%]">
+                                          <input  id="add-button" type="text" class="input-field] w-full bg-[#463f60] p-4 rounded-lg border-none focus:outline-none" placeholder="Add an aditional link">
+                                        </div>
+                                        
+                                        
+                                      </div>
+                                    </div>
+ 
+
+                                  <button class="w-full mt-5 bg-[#c3ff00] text-black p-4 rounded-lg border-none focus:outline-none">Save
+
+                                  </button>
+
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                            <div class="bg-[#342a4d] p-6 rounded-lg mt-6">
+
+                              <div class=" flex flex-col">
+
+                                <div class="flex items-center justify-between">
+                                    <h1 class="text-xl">Video Link</h1>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="bg-[#342a4d] p-6 rounded-lg mt-6">
+
+                              <div class=" flex flex-col">
+
+                                <div class="flex items-center justify-between">
+                                    <h1 class="text-xl">Demo Link</h1>
+                                </div>
+                              </div>
+                            </div>
+
+                              
+                          </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+    </main>
+
+
+    <!-- Click Tab Inable -->
+
+
+    <script>
+
+        let tabs = document.querySelectorAll(".tab")
+        let indicator = document.querySelector(".indicator")
+        let panels = document.querySelectorAll(".tab-panel")
+
+        indicator.style.width = tabs[0].getBoundingClientRect().width + 'px'
+        indicator.style.left = tabs[0].getBoundingClientRect().left - tabs[0].parentElement.getBoundingClientRect().left + 'px'
+
+        tabs.forEach(tab =>{
+        tab.addEventListener("click", ()=>{
+            let tabTarget = tab.getAttribute("aria-controls")
+
+            indicator.style.width = tab.getBoundingClientRect().width + 'px'
+            indicator.style.left = tab.getBoundingClientRect().left - tab.parentElement.getBoundingClientRect().left + 'px'
+
+
+            panels.forEach(panel =>{
+            let panelId = panel.getAttribute("id")
+            if(tabTarget === panelId){
+                panel.classList.remove("invisible", "opacity-0")
+                panel.classList.add("visible", "opacity-100")
+            } else {
+                panel.classList.add("invisible", "opacity-0")
+            }
+            })
+        })
+        })
+
+    </script>
+
+
+
+    <!-- Input Add Option  -->
+
+    <script>
+      const inputContainer = document.querySelector('.input-container');
+      const addButton = document.getElementById('add-button');
+
+      // Function to remove an input row
+      function removeInputRow(event) {
+        const inputRow = event.target.closest('.input-row');
+        if (inputRow) {
+          inputContainer.removeChild(inputRow);
+        }
+      }
+
+      // Function to add a new input row
+      function addInputRow() {
+        const newInputRow = document.createElement('div');
+        newInputRow.className = 'input-row';
+        newInputRow.innerHTML = `
+        <div class="input-container mt-5">
+         <div class="input-row flex items-center justify-between">
+            <div class="w-[90%]">
+              <input type="text" class="input-field] w-full bg-[#463f60] p-4 rounded-lg border-none focus:outline-none" placeholder="apple.link/gose here.">
+             </div>
+             <div class="flex items-center justify-center">
+               <button class="remove-button ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"   stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                                      
+                </button>
+              </div>
+                                        
+            </div>
+          </div>                   
+        `;
+        
+        const removeButton = newInputRow.querySelector('.remove-button');
+        removeButton.addEventListener('click', removeInputRow);
+        
+        inputContainer.appendChild(newInputRow);
+      }
+
+      addButton.addEventListener('click', addInputRow);
+
+      const removeButtons = document.querySelectorAll('.remove-button');
+      removeButtons.forEach(button => {
+        button.addEventListener('click', removeInputRow);
+      });
+    </script>
+
+
+<!-- JS -->
+<script src="main.js"></script>
+    
+</body>
+</html>
